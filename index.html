@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formatos de Cartas y Documentos</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header>
+    <h1>Centro de Documentos</h1>
+    <p>Encuentra y genera formatos de cartas, derechos de petición, cartas de renuncia, hojas de vida y más.</p>
+  </header>
+
+  <section id="documentos">
+    <h2>Formatos Disponibles</h2>
+    <div class="documento">
+      <h3>Carta de Petición</h3>
+      <a href="documentos/carta_peticion.docx" download="carta_peticion.docx">Descargar formato</a>
+    </div>
+    <div class="documento">
+      <h3>Carta de Renuncia</h3>
+      <a href="documentos/carta_renuncia.docx" download="carta_renuncia.docx">Descargar formato</a>
+    </div>
+    <div class="documento">
+      <h3>Hoja de Vida</h3>
+      <a href="documentos/hoja_vida.docx" download="hoja_vida.docx">Descargar formato</a>
+    </div>
+    <div class="documento">
+      <h3>Generar Nuevo Documento</h3>
+      <button onclick="mostrarFormulario()">Generar Carta Personalizada</button>
+    </div>
+  </section>
+
+  <div id="formulario" style="display:none;">
+    <h3>Formulario de Generación de Carta</h3>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" required><br>
+    
+    <label for="cargo">Cargo:</label>
+    <input type="text" id="cargo" required><br>
+    
+    <label for="motivo">Motivo de la Petición:</label>
+    <textarea id="motivo" required></textarea><br>
+    
+    <button onclick="generarCarta()">Generar Carta</button>
+  </div>
+
+  <footer>
+    <p>© 2024 Centro de Documentos. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
